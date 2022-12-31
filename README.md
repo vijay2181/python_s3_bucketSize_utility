@@ -2,6 +2,10 @@
 
 This is a simple tool to check size of each bucket or all buckets in s3
 
+## Note
+
+before running this script, you need to set aws profile 
+
 ## Install
 
 On the terminal, run the following to install the Python packages:
@@ -13,8 +17,8 @@ On the terminal, run the following to install the Python packages:
 `python s3BucketSize.py --help`
 
 
-`python s3BucketSize.py --all`
+`python s3BucketSize.py --all --profile PROFILE_NAME_HERE`
 
 
-`python s3BucketSize.py --bucket-name MYBUCKETNAMEHERE`
+`python s3BucketSize.py --bucket-name MYBUCKET_NAME_HERE --profile PROFILE_NAME_HERE`
 
