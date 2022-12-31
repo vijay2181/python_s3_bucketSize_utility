@@ -24,8 +24,9 @@ if args['all']=='all':
 else:
     if args['bucket']!=None:
         bucket=args['bucket']
-        print("single bucket")
-        os.system('''aws s3 ls --summarize --human-readable --recursive s3://'''+ bucket +''' | grep "Total" ''')
+        os.system('''
+        echo bucket -- ''' + bucket + ''' && 
+        aws s3 ls --summarize --human-readable --recursive s3://'''+ bucket +''' | grep "Total" ''')
         sys.exit()
     else:
         pass
