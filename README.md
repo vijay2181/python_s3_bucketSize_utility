@@ -10,4 +10,7 @@ On the terminal, run the following to install the Python packages:
 
 ## Usage
 
-`python s3bucketsizecheck.py --bucket-name MYBUCKETNAMEHERE`
+`python s3BucketSize.py --help`
+`python s3BucketSize.py --all`
+`python s3BucketSize.py --bucket-name MYBUCKETNAMEHERE`
+
