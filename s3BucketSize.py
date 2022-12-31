@@ -5,9 +5,11 @@ import os
 parser = argparse.ArgumentParser(description='Description of your program')
 parser.add_argument('-a','--all', nargs='?', const='all', type=str, help='provide all option to get all buckets sizes')  #setting default value('all') to argument all
 parser.add_argument('-b','--bucket', help='provide single bucket name to get single bucket size')
+parser.add_argument('-p','--profile', help='provide aws profile', required=True)
 args = vars(parser.parse_args())
+profile=args['profile']
 
-session = boto3.Session(region_name='us-west-2', profile_name='default')
+session = boto3.Session(profile_name=profile)
 s3client = session.client('s3')
 allbuckets = s3client.list_buckets()
 
