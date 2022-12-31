@@ -26,7 +26,7 @@ else:
         bucket=args['bucket']
         os.system('''
         echo bucket -- ''' + bucket + ''' && 
-        aws s3 ls --summarize --human-readable --recursive s3://'''+ bucket +''' | grep "Total" ''')
+        aws s3 ls --summarize --human-readable --recursive s3://'''+ bucket +''' --profile '''+ profile +''' | grep "Total" ''')
         sys.exit()
     else:
         pass
