@@ -19,7 +19,7 @@ if args['all']=='all':
     for bucket in allbuckets['Buckets']:
         lst=list(bucket.values())
         print("bucket --",lst[0])
-        os.system('''aws s3 ls --summarize --human-readable --recursive s3://'''+ lst[0] +''' | grep "Total" ''')
+        os.system('''aws s3 ls --summarize --human-readable --recursive s3://'''+ lst[0] +''' --profile '''+ profile +''' | grep "Total" ''')
         print("*"*60)
 else:
     if args['bucket']!=None:
@@ -31,3 +31,4 @@ else:
     else:
         pass
     print("pls dont provide any arguments with -a option, except all option")
+
