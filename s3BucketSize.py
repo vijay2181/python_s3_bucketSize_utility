@@ -1,5 +1,5 @@
 import argparse
-import sys
+from sys import exit
 import boto3
 import os
 parser = argparse.ArgumentParser(description='Description of your program')
@@ -27,7 +27,7 @@ else:
         os.system('''
         echo bucket -- ''' + bucket + ''' && 
         aws s3 ls --summarize --human-readable --recursive s3://'''+ bucket +''' --profile '''+ profile +''' | grep "Total" ''')
-        sys.exit()
+        sys.exit(0)
     else:
         pass
     print("pls dont provide any arguments with -a option, except all option")
