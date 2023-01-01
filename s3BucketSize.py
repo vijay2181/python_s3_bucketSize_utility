@@ -1,7 +1,7 @@
 import argparse
 from sys import exit
 import boto3
-import os
+from os import system
 parser = argparse.ArgumentParser(description='Description of your program')
 parser.add_argument('-a','--all', nargs='?', const='all', type=str, help='provide all option to get all buckets sizes')  #setting default value('all') to argument all
 parser.add_argument('-b','--bucket', help='provide single bucket name to get single bucket size')
